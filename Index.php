@@ -15,7 +15,7 @@
                         <label>E-mail : </label> 
 				            <input type="email" name="adresse" placeholder="example@example.com"/><br/>
                     <br/><label>Objet : </label> 
-				            <input type="texte" name="objet" placeholder="objet"/><br/>
+				            <input type="texte" name="objet" placeholder="Ex : Travail"/><br/>
                     <br/><label>Texte : </label><br/> 
 				            <textarea type="text" name="msg" maxlength="500" placeholder="Votre message!" rows="8" cols="60"></textarea><br/>
                     <br/><button class="btn btn-success col-lg-2 col-lg-offset-2" type="submit" value ="Valider">Envoi</button>
