@@ -8,18 +8,21 @@
 
 	if (isset($_POST['envoye']))
 	{
-    	if (empty($to) || empty($headers) || empty($subject) || empty($message))
+    	if (empty($to) || empty($headers) || empty($subject) || empty($message)) //verifie la presence de contenue
 		{  
-    		echo '<strong> les champs doivent être renseignés</strong>';
+    		echo '<strong> les champs doivent être renseignés</strong><br/>
+                  <a href="http://localhost/php_challenge1_send_mail/index.php">Retour au mail</a>';
 		} 
- 		else if (mail($to, $subject, $message, $headers))
+ 		else if (mail($to, $subject, $message, $headers)) //envoie le mail et met en place un cookie
         {
-            $alert = '<strong>E-mail envoyé avec succès</strong>';
+            $alert = '<strong>E-mail envoyé avec succès</strong><br/>
+                      <a href="http://localhost/php_challenge1_send_mail/index.php">Retour au mail</a>';
             setcookie("sent", "1", time() + 120);
         }
         else
         {
-            $alert = '<strong>Erreur d\'envoi de l\'e-mail</strong>';
+            $alert = '<strong>Erreur d\'envoi de l\'e-mail</strong><br/>
+                      <a href="http://localhost/php_challenge1_send_mail/index.php">Retour au mail</a>';
         }
         
         echo $alert;
